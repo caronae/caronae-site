@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Last Published: Wed Mar 02 2016 12:57:31 GMT+0000 (UTC) -->
+<html data-wf-site="55f727fc81c0c2a86eeb2c2c" data-wf-page="56aa802e9ddc978f246c4d03">
+<head>
+  <meta charset="utf-8">
+  <title>Termos de Uso</title>
+  <meta property="og:title" content="Termos de Uso">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/caronae.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+        google: {
+          families: ["Montserrat:400,700","Varela:400"]
+        }
+      });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <style>
+    .pergunta-title{
+        cursor:pointer;
+    }
+  </style>
+</head>
+<body class="landing-page">
+  <div data-collapse="medium" data-animation="over-right" data-duration="400" data-contain="1" class="w-nav header">
+    <div class="w-row lines-container">
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line brown"></div>
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line blue"></div>
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line pink"></div>
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line green"></div>
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line orange"></div>
+      <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line red"></div>
+    </div>
+    <div class="w-container">
+      <a href="#top" class="w-nav-brand logo">
+        <img src="images/caronae-logo.png">
+      </a>
+      <nav role="navigation" class="w-nav-menu side-menu">
+        <a href="index.html#top" class="w-nav-link nav-link">Aplicativo</a>
+        <a href="index.html#vantagens" class="w-nav-link nav-link">Vantagens</a>
+        <a href="index.html#como-usar" class="w-nav-link nav-link">Como usar</a>
+        <a href="index.html#quem-faz" class="w-nav-link nav-link">Quem faz</a>
+        <a href="index.html#contato" class="w-nav-link nav-link">Falaê</a>
+        <a href="faq.html" class="w-nav-link nav-link">FAQ</a>
+        <a href="termos-de-uso.html" class="w-nav-link nav-link">Termos de Uso</a>
+      </nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  
+  <object data="termos_de_uso.pdf" type="application/pdf" width="100%" height="1000px"> 
+  <p>Se estiver tendo problemas em visualizar o PDF, <a href="https://drive.google.com/a/fundoverde.ufrj.br/file/d/0BwUWhHiBfSQDRkEzRkYteVBvWXc/view">clique aqui para acessá-lo.</a></p>  
+ </object>
+ </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $( document ).ready(function() {
+        $('.pergunta-title').click(function(){
+            $(this).parent().find('.resposta').slideToggle(300);
+        });
+    });
+  </script>
+</body>
+</html>
