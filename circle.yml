@@ -1,0 +1,12 @@
+deployment:
+  production:
+    branch: master
+    owner: macecchi
+    commands:
+      - ssh -A caronae@146.164.84.130 -p 22022 "cd ~/site && git fetch origin master && git reset --hard origin/master"
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
