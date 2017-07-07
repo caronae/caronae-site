@@ -7,7 +7,7 @@ deployment:
     branch: master
     owner: caronae
     commands:
-      - ssh -A caronae@146.164.84.130 -p 22022 "cd ~/site && git fetch origin master && git reset --hard origin/master"
+      - ssh -A $CARONAE_PROD_USER@$CARONAE_PROD_HOST -p $CARONAE_PROD_PORT "cd ~/site && git fetch origin master && git reset --hard origin/master"
 
 experimental:
   notify:
