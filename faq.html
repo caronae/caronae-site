@@ -35,8 +35,8 @@
       <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line orange"></div>
       <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2 header-line red"></div>
     </div>
-    <div class="w-container">
-      <a href="#top" class="w-nav-brand logo">
+    <div id="nav_desk" class="w-container">
+      <a href="//www.caronae.com.br" class="w-nav-brand logo">
         <img src="images/caronae-logo.png">
       </a>
       <nav role="navigation" class="w-nav-menu side-menu">
@@ -51,6 +51,9 @@
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
+    </div>
+    <div id="nav_mobile" class="w-container w-nav-brand logo" style="display: none">
+      <img src="images/caronae-logo.png">
     </div>
   </div>
   <div class="faq-container container short">
@@ -168,6 +171,22 @@
             $(this).parent().find('.resposta').slideToggle(300);
         });
     });
+
+    function getParameterByName(name) {
+      var url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    var mobile = getParameterByName('mobile');
+    if (mobile != null) {
+      document.getElementById('contato').style.display = "none";
+      document.getElementById('nav_desk').style.display = "none";
+      document.getElementById('nav_mobile').style.display = "block";
+    }
   </script>
 </body>
 </html>
