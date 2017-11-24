@@ -16,5 +16,5 @@ jobs:
           name: Deploy to production
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -o StrictHostKeyChecking=No -A $CARONAE_DEV_USER@$CARONAE_DEV_HOST -p $CARONAE_DEV_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master"
+              ssh -o StrictHostKeyChecking=No -A $CARONAE_PROD_USER@$CARONAE_PROD_HOST -p $CARONAE_PROD_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master"
             fi
