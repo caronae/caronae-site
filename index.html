@@ -296,6 +296,7 @@
   </section>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
+  <script type="text/javascript" src="js/get-parameter.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
     $( document ).ready(function() {
@@ -303,6 +304,15 @@
             $(this).parent().find('.resposta').slideToggle(300);
         });
     });
+
+    var name = getParameterByName('falaeName');
+    var subject = getParameterByName('falaeSubject');
+    var message = getParameterByName('falaeMessage');
+    if (subject != null) {
+      document.getElementById('nome').value = name;
+      document.getElementById('assunto').value = subject;
+      document.getElementById('mensagem').value = message;
+    }
   </script>
 </body>
 </html>
