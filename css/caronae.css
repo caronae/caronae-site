@@ -873,6 +873,38 @@ strong {
   max-width: 60%;
 }
 
+.social li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social path,
+.social circle {
+  transition: fill .3s ease;
+}
+
+.social .facebook-icon:hover path,
+.social .facebook-icon:focus path {
+  fill: #4066a9;
+}
+
+.social .instagram-icon:hover path,
+.social .instagram-icon:focus path,
+.social .instagram-icon:hover circle,
+.social .instagram-icon:focus circle {
+  fill: url(#instagram-gradient);
+}
+
+.social .youtube-icon:hover path,
+.social .youtube-icon:focus path {
+  fill: #f70022;
+}
+
+.social .github-icon:hover path,
+.social .github-icon:focus path {
+  fill: #1e1c1d;
+}
+
 @media (max-width: 991px) {
   .side-menu {
     background-color: #fff;
