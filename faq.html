@@ -187,6 +187,11 @@
         });
     });
 
+    $(function(){
+      $(".footer").load("footer.html");
+    });
+
+
     var mobile = getParameterByName('mobile');
     if (mobile != null) {
       document.getElementById('contato').style.display = "none";
@@ -194,5 +199,6 @@
       document.getElementById('nav_mobile').style.display = "block";
     }
   </script>
+  <div class="footer"></div>
 </body>
 </html>

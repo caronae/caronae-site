@@ -873,6 +873,64 @@ strong {
   max-width: 60%;
 }
 
+.footer{
+  position: relative;
+  background: transparent;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  height: 64px;
+}
+
+.soc {
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 40px;
+  text-align: center;
+}
+.soc li {
+  display: inline-block;
+  margin: 30px;
+}
+.soc a, .soc svg {
+  display: block;
+}
+.soc a {
+  position: relative;
+  height: 48px;
+  width: 48px;
+}
+.soc svg {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-1,.icon-2, .icon-3, .icon-4{
+  color:#6e6e70;
+  fill:#6e6e70;
+}
+
+.icon-1:hover {
+  color: #3b5998;
+  fill: #3b5998;
+}
+
+.icon-2:hover {
+  color:#000;
+  fill:#000;
+}
+
+.icon-3:hover {
+  fill: url(#gradientInsta)
+}
+
+.icon-4:hover{
+  color:#FF0000;
+  fill:#FF0000;
+}
+
 @media (max-width: 991px) {
   .side-menu {
     background-color: #fff;
