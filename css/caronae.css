@@ -873,6 +873,64 @@ strong {
   max-width: 60%;
 }
 
+.footer{
+  position: relative;
+  background: transparent;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  height: 64px;
+}
+
+.social {
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+.social li {
+  display: inline-block;
+  margin: 30px;
+}
+.social a, .social svg {
+  display: block;
+}
+.social a {
+  position: relative;
+  height: 42px;
+  width: 42px;
+}
+.social svg {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-facebook, .icon-github, .icon-instagram, .icon-youtube{
+  color:#6e6e70;
+  fill:#6e6e70;
+}
+
+.icon-facebook:hover {
+  color: #3b5998;
+  fill: #3b5998;
+}
+
+.icon-github:hover {
+  color:#000;
+  fill:#000;
+}
+
+.icon-instagram:hover {
+  fill: url(#instagram-gradient)
+}
+
+.icon-youtube:hover{
+  color:#FF0000;
+  fill:#FF0000;
+}
+
 @media (max-width: 991px) {
   .side-menu {
     background-color: #fff;

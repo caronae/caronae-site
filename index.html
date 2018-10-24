@@ -289,16 +289,16 @@
         <p>Ah, não! Algo deu errado no envio, por favor tente de novo.</p>
       </div>
     </div>
-    <p>Se preferir mande uma mensagem para nosso <a target="_blank" href="https://www.facebook.com/redecaronae/">Facebook</a>
-    </p>
-    <p>Veja os vídeos de divulgação no nosso <a target="_blank" href="https://www.youtube.com/channel/UCw3KFW1tZRxXShEowvVZLqQ">YouTube</a>
-    </p>
   </section>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <script type="text/javascript" src="js/get-parameter.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
+    $( document ).ready(function(){
+      $('.footer').load("footer.html");
+    });
+
     $( document ).ready(function() {
         $('.pergunta-title').click(function(){
             $(this).parent().find('.resposta').slideToggle(300);
@@ -314,5 +314,6 @@
       document.getElementById('mensagem').value = message;
     }
   </script>
+<div class='footer'></div>
 </body>
 </html>
