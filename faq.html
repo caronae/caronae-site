@@ -181,16 +181,15 @@
   <script type="text/javascript" src="js/get-parameter.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
+    $( document ).ready(function(){
+      $('.footer').load("footer.html");
+    });
+
     $( document ).ready(function() {
         $('.pergunta-title').click(function(){
             $(this).parent().find('.resposta').slideToggle(300);
         });
     });
-
-    $(function(){
-      $(".footer").load("footer.html");
-    });
-
 
     var mobile = getParameterByName('mobile');
     if (mobile != null) {

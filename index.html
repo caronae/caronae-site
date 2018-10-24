@@ -16,8 +16,6 @@
           families: ["Montserrat:400,700","Varela:400"]
         }
       });
-
-
   </script>
   <script type="text/javascript" src="js/modernizr.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg">
@@ -297,14 +295,14 @@
   <script type="text/javascript" src="js/get-parameter.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
+    $( document ).ready(function(){
+      $('.footer').load("footer.html");
+    });
+
     $( document ).ready(function() {
         $('.pergunta-title').click(function(){
             $(this).parent().find('.resposta').slideToggle(300);
         });
-    });
-
-    $(function(){
-      $(".footer").load("footer.html");
     });
 
     var name = getParameterByName('falaeName');

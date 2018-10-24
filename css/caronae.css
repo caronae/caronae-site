@@ -882,51 +882,51 @@ strong {
   height: 64px;
 }
 
-.soc {
+.social {
   display: block;
   font-size: 0;
   list-style: none;
   margin: 0;
-  padding: 40px;
+  padding: 10px;
   text-align: center;
 }
-.soc li {
+.social li {
   display: inline-block;
   margin: 30px;
 }
-.soc a, .soc svg {
+.social a, .social svg {
   display: block;
 }
-.soc a {
+.social a {
   position: relative;
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
 }
-.soc svg {
+.social svg {
   height: 100%;
   width: 100%;
 }
 
-.icon-1,.icon-2, .icon-3, .icon-4{
+.icon-facebook, .icon-github, .icon-instagram, .icon-youtube{
   color:#6e6e70;
   fill:#6e6e70;
 }
 
-.icon-1:hover {
+.icon-facebook:hover {
   color: #3b5998;
   fill: #3b5998;
 }
 
-.icon-2:hover {
+.icon-github:hover {
   color:#000;
   fill:#000;
 }
 
-.icon-3:hover {
-  fill: url(#gradientInsta)
+.icon-instagram:hover {
+  fill: url(#instagram-gradient)
 }
 
-.icon-4:hover{
+.icon-youtube:hover{
   color:#FF0000;
   fill:#FF0000;
 }
