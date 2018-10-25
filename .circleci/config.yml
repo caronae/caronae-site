@@ -10,11 +10,11 @@ jobs:
           name: Deploy to dev
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              ssh -o StrictHostKeyChecking=No -A $CARONAE_DEV_USER@$CARONAE_DEV_HOST -p $CARONAE_DEV_PORT "cd /var/caronae/caronae-site && sudo git fetch origin develop && sudo git reset --hard origin/develop && cat apple-app-site-association-dev > apple-app-site-association"
+              ssh -o StrictHostKeyChecking=No -A $CARONAE_DEV_USER@$CARONAE_DEV_HOST -p $CARONAE_DEV_PORT "cd /var/caronae/caronae-site && sudo git fetch origin develop && sudo git reset --hard origin/develop && sudo cat apple-app-site-association-dev > apple-app-site-association"
             fi
       - deploy:
           name: Deploy to production
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -o StrictHostKeyChecking=No -A $CARONAE_PROD_USER@$CARONAE_PROD_HOST -p $CARONAE_PROD_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master && cat apple-app-site-association-prod > apple-app-site-association"
+              ssh -o StrictHostKeyChecking=No -A $CARONAE_PROD_USER@$CARONAE_PROD_HOST -p $CARONAE_PROD_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master && sudo cat apple-app-site-association-prod > apple-app-site-association"
             fi
