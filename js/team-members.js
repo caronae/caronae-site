@@ -33,7 +33,7 @@ function rowsSequenceFor(totalMembers) {
 
 /**
   * @desc writes in the document the table of team members
-  * @param [members] - array with members, where each member is [name, image.ext, degree, linkedInUser]
+  * @param [members] - array with members, where each member is [name, image.ext, degree, userUrl]
 */
 function createTeamMembers(membersArray) {
 
@@ -83,7 +83,7 @@ function createTeamMembers(membersArray) {
 			var member = membersArray[memberTableIndex]
 
 			finalTeamMembers += '<div class="' + membersColClass + '">'
-    	    if (member[3]) finalTeamMembers += '<a href="https://www.linkedin.com/in/' + member[3] + '" target="_blank">'
+    	    if (member[3]) finalTeamMembers += '<a href="' + member[3] + '" target="_blank">'
     	    	finalTeamMembers += '<img src="images/' + (member[1] || defaultAvatar) + '" class="' + avatarClassArray[memberTableIndex%totalAvatars] + '">'
     	    if (member[3]) finalTeamMembers += '</a>'
     	    finalTeamMembers += '<h4 class="subheading-font">' + member[0] + '</h4>'
