@@ -699,7 +699,7 @@ strong {
 .block.brown {
   border-color: #6e361f;
   background-color: transparent;
-  background-image: url('../images/cadeado.svg');
+  background-image: url('../images/symbols/cadeado.svg');
   background-position: 95% 9px;
   background-size: 26px;
   background-repeat: no-repeat;
@@ -707,35 +707,35 @@ strong {
 
 .block.blue {
   border-color: #2b388a;
-  background-image: url('../images/relogio.svg');
+  background-image: url('../images/symbols/relogio.svg');
   background-position: 95% 4%;
   background-size: 34px;
 }
 
 .block.pink {
   border-color: #eb71ac;
-  background-image: url('../images/alvo.svg');
+  background-image: url('../images/symbols/alvo.svg');
   background-position: 97% 3%;
   background-size: 35px;
 }
 
 .block.green {
   border-color: #17b270;
-  background-image: url('../images/arbusto.svg');
+  background-image: url('../images/symbols/arbusto.svg');
   background-position: 97% 7%;
   background-size: 39px;
 }
 
 .block.orange {
   border-color: #ed8024;
-  background-image: url('../images/pessoas.svg');
+  background-image: url('../images/symbols/pessoas.svg');
   background-position: 97% 4%;
   background-size: 41px;
 }
 
 .block.red {
   border-color: #eb3d38;
-  background-image: url('../images/carona.svg');
+  background-image: url('../images/symbols/carona.svg');
   background-position: 96% 4%;
   background-size: 24px;
 }
@@ -1022,4 +1022,3 @@ strong {
     padding-left: 20px;
   }
 }
-

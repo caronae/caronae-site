@@ -84,7 +84,7 @@ function createTeamMembers(membersArray) {
 
 			finalTeamMembers += '<div class="' + membersColClass + '">'
     	    if (member[3]) finalTeamMembers += '<a href="' + member[3] + '" target="_blank">'
-    	    	finalTeamMembers += '<img src="images/' + (member[1] || defaultAvatar) + '" class="' + avatarClassArray[memberTableIndex%totalAvatars] + '">'
+    	    	finalTeamMembers += '<img src="images/members/' + (member[1] || defaultAvatar) + '" class="' + avatarClassArray[memberTableIndex%totalAvatars] + '">'
     	    if (member[3]) finalTeamMembers += '</a>'
     	    finalTeamMembers += '<h4 class="subheading-font">' + member[0] + '</h4>'
     	    finalTeamMembers += '<p class="description">' + member[2] + '</p>'
