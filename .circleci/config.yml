@@ -5,8 +5,11 @@ orbs:
 
 jobs:
   deploy-dev:
+    executor: aws-cli/default
     steps:
       - checkout
+      - aws-cli/install
+      - aws-cli/configure
       - run:
           name: Deploy to dev
           command:
@@ -14,8 +17,11 @@ jobs:
             aws s3 cp ./apple-app-site-association-dev s3://$CARONAE_DEV_BUCKET/apple-app-site-association
 
   deploy-prod:
+    executor: aws-cli/default
     steps:
       - checkout
+      - aws-cli/install
+      - aws-cli/configure
       - run:
           name: Deploy to production
           command:
