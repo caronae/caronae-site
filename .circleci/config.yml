@@ -1,16 +1,12 @@
-version: 2
+version: 2.1
 
-references:
-  defaults: &defaults
-    docker:
-      - image: circleci/python:3.7
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
 
 jobs:
   deploy-dev:
-    <<: *defaults
     steps:
       - checkout
-      - run: pip3 install awscli --upgrade --user
       - run:
           name: Deploy to dev
           command:
@@ -18,10 +14,8 @@ jobs:
             aws s3 cp ./apple-app-site-association-dev s3://$CARONAE_DEV_BUCKET/apple-app-site-association
 
   deploy-prod:
-    <<: *defaults
     steps:
       - checkout
-      - run: pip3 install awscli --upgrade --user
       - run:
           name: Deploy to production
           command:
@@ -29,8 +23,6 @@ jobs:
             aws s3 cp ./apple-app-site-association-prod s3://$CARONAE_PROD_BUCKET/apple-app-site-association
 
 workflows:
-  version: 2
-
   deploy:
     jobs:
       - deploy-dev:
