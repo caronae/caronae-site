@@ -3,24 +3,30 @@ version: 2
 references:
   defaults: &defaults
     docker:
-      - image: circleci/node:latest
+      - image: circleci/python:3.7
 
 jobs:
   deploy-dev:
     <<: *defaults
     steps:
       - checkout
+      - run: pip3 install awscli --upgrade --user
       - run:
           name: Deploy to dev
-          command: ssh -o StrictHostKeyChecking=No -A $CARONAE_DEV_USER@$CARONAE_DEV_HOST -p $CARONAE_DEV_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master && sudo ln -sf apple-app-site-association-dev apple-app-site-association"
+          command:
+            aws s3 sync --delete --exclude ".*" --exclude "apple-app-site-association-*" . s3://$CARONAE_DEV_BUCKET/
+            aws s3 cp ./apple-app-site-association-dev s3://$CARONAE_DEV_BUCKET/apple-app-site-association
 
   deploy-prod:
     <<: *defaults
     steps:
       - checkout
+      - run: pip3 install awscli --upgrade --user
       - run:
           name: Deploy to production
-          command: ssh -o StrictHostKeyChecking=No -A $CARONAE_PROD_USER@$CARONAE_PROD_HOST -p $CARONAE_PROD_PORT "cd /var/caronae/caronae-site && sudo git fetch origin master && sudo git reset --hard origin/master && sudo ln -sf apple-app-site-association-prod apple-app-site-association"
+          command:
+            aws s3 sync --delete --exclude ".*" --exclude "apple-app-site-association-*" . s3://$CARONAE_PROD_BUCKET/
+            aws s3 cp ./apple-app-site-association-prod s3://$CARONAE_PROD_BUCKET/apple-app-site-association
 
 workflows:
   version: 2
