@@ -21,16 +21,6 @@ commands:
             aws s3 cp --acl "public-read" ./<< parameters.apple-app-site-association-file >> s3://<< parameters.bucket-name >>/apple-app-site-association
 
 jobs:
-  deploy-dev:
-    executor: aws-cli/default
-    steps:
-      - checkout
-      - aws-cli/install
-      - aws-cli/configure
-      - deploy-bucket:
-          bucket-name: $CARONAE_DEV_BUCKET
-          apple-app-site-association-file: apple-app-site-association-dev
-
   deploy-prod:
     executor: aws-cli/default
     steps:
@@ -44,14 +34,4 @@ jobs:
 workflows:
   deploy:
     jobs:
-      - deploy-dev:
-          filters:
-            branches:
-              only: master
-      - hold-prod:
-          type: approval
-          requires:
-            - deploy-dev
-      - deploy-prod:
-          requires:
-            - hold-prod
+      - deploy-prod
