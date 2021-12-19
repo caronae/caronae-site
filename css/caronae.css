@@ -840,6 +840,8 @@ strong {
 
 .row-apoiadores {
   max-width: 800px;
+  display: flex;
+  align-items: center;
 }
 
 .apoio-ufrj {
