@@ -89,7 +89,7 @@ function createTeamMembers(membersArray) {
     	    if (member[4]) finalTeamMembers += '</a>'
     	    finalTeamMembers += '<h4 class="subheading-font">' + member[0] + '</h4>'
     	    finalTeamMembers += '<p class="description">' + member[2] + '</p>'
-					finalTeamMembers += '<h5>' + member[3] + '</h5>'
+					finalTeamMembers += '<h5>' + "Área: " + (member[3] || "-") + '</h5>'
 			finalTeamMembers += '</div>'
 			memberTableIndex++;
 		}
