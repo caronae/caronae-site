@@ -824,7 +824,7 @@ strong {
 }
 
 .apoiador.apoiador-1 {
-  padding: 35px 30px;
+  padding: 35px 3px;
 }
 
 .apoiador-img {
@@ -971,6 +971,7 @@ strong {
     margin-left: auto;
   }
   .apoiador {
+    height: 100%;
     padding: 10px 40px;
   }
   .apoio-ufrj {
