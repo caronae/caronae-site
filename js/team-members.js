@@ -78,18 +78,18 @@ function createTeamMembers(membersArray) {
 		finalTeamMembers += '<div class="separator-div"></div>'
 		finalTeamMembers += '<div class="' + membersRowClass + '">'
 
-		// each member: [name, image.ext, degree, role, linkedInUser]
+		// each member: [name, image.ext, degree, linkedInUser, role]
 
 		for (var j = 0; j < totalMembersRow; j++) {
 			var member = membersArray[memberTableIndex]
 
 			finalTeamMembers += '<div class="' + membersColClass + '">'
-    	    if (member[4]) finalTeamMembers += '<a href="' + member[4] + '" target="_blank">'
+    	    if (member[3]) finalTeamMembers += '<a href="' + member[3] + '" target="_blank">'
     	    	finalTeamMembers += '<img src="images/members/' + (member[1] || defaultAvatar) + '" class="' + avatarClassArray[memberTableIndex%totalAvatars] + '">'
-    	    if (member[4]) finalTeamMembers += '</a>'
+    	    if (member[3]) finalTeamMembers += '</a>'
     	    finalTeamMembers += '<h4 class="subheading-font">' + member[0] + '</h4>'
     	    finalTeamMembers += '<p class="description">' + member[2] + '</p>'
-					finalTeamMembers += '<h5>' + "Área: " + (member[3] || "-") + '</h5>'
+					finalTeamMembers += '<h5>' + "Área: " + (member[4] || "-") + '</h5>'
 			finalTeamMembers += '</div>'
 			memberTableIndex++;
 		}
