@@ -811,15 +811,16 @@ strong {
 }
 
 .apoiadores {
-  display: block;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   background-color: transparent;
 }
 
 .apoiador {
-  padding: 40px;
   text-align: center;
 }
 
@@ -833,15 +834,15 @@ strong {
 
 .apoiadores-title {
   margin-top: 20px;
-  padding-left: 30px;
-  font-size: 12px;
   line-height: 20px;
 }
 
 .row-apoiadores {
-  max-width: 800px;
+  width: 80%;
   display: flex;
+  flex-flow: wrap;
   align-items: center;
+  justify-content: space-around;
 }
 
 .apoio-ufrj {
@@ -973,6 +974,7 @@ strong {
   .apoiador {
     height: 100%;
     padding: 10px 40px;
+    flex-basis: 50%
   }
   .apoio-ufrj {
     width: 100%;
