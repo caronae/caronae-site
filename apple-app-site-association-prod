@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5JHLCV2DBL.br.ufrj.caronae",
+        "paths": [
+          "/c/*",
+          "/carona/*"
+        ]
+      }
+    ]
+  }
+}

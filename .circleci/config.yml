@@ -1,0 +1,37 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+
+commands:
+  deploy-bucket:
+    parameters:
+      bucket-name:
+        type: string
+      apple-app-site-association-file:
+        type: string
+    steps:
+      - run:
+          name: Deploy website
+          command:
+            aws s3 sync --delete --exclude ".*" --exclude "apple-app-site-association-*" --acl "public-read" . s3://<< parameters.bucket-name >>/
+      - run:
+          name: Deploy apple-app-site-association
+          command:
+            aws s3 cp --acl "public-read" ./<< parameters.apple-app-site-association-file >> s3://<< parameters.bucket-name >>/apple-app-site-association
+
+jobs:
+  deploy-prod:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/install
+      - aws-cli/configure
+      - deploy-bucket:
+          bucket-name: $CARONAE_PROD_BUCKET
+          apple-app-site-association-file: apple-app-site-association-prod
+
+workflows:
+  deploy:
+    jobs:
+      - deploy-prod
